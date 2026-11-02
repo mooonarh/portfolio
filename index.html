@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Molana Tresna Legawa — Full Stack Developer</title>
+<style>
+  :root{
+    --bg:#fafaf9; --surface:#ffffff; --ink:#1c1917; --muted:#57534e;
+    --accent:#0d9488; --accent-soft:#ccfbf1; --border:#e7e5e4;
+    --header-bg:rgba(250,250,249,.92); --shadow:0 8px 24px rgba(0,0,0,.06);
+  }
+  html.dark{
+    --bg:#0c0a09; --surface:#1c1917; --ink:#fafaf9; --muted:#a8a29e;
+    --accent:#2dd4bf; --accent-soft:#134e4a; --border:#292524;
+    --header-bg:rgba(12,10,9,.92); --shadow:0 8px 24px rgba(0,0,0,.4);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;transition:background .25s,color .25s}
+  a{color:var(--accent);text-decoration:none}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+  header{position:sticky;top:0;background:var(--header-bg);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:700;font-size:1.1rem;color:var(--ink)}
+  .logo span{color:var(--accent)}
+  .nav-right{display:flex;align-items:center;gap:20px}
+  nav ul{display:flex;gap:24px;list-style:none}
+  nav ul a{color:var(--muted);font-size:.95rem;font-weight:500}
+  nav ul a:hover{color:var(--accent)}
+  #themeToggle{background:none;border:1px solid var(--border);border-radius:8px;width:38px;height:38px;cursor:pointer;font-size:1.05rem;line-height:1;color:var(--ink)}
+  #themeToggle:hover{border-color:var(--accent)}
+  .hero{padding:96px 0 72px;border-bottom:1px solid var(--border)}
+  .hero h1{font-size:2.8rem;line-height:1.15;letter-spacing:-.02em}
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .roles{margin-top:14px;font-size:1.05rem;color:var(--muted);font-weight:500}
+  .roles b{color:var(--accent);font-weight:600}
+  .hero p{margin-top:18px;font-size:1.15rem;color:var(--muted);max-width:600px}
+  .btn{display:inline-block;margin-top:28px;padding:12px 26px;border-radius:10px;background:var(--accent);color:#fff;font-weight:600}
+  html.dark .btn{color:#0c0a09}
+  .btn:hover{filter:brightness(1.08)}
+  section{padding:72px 0;border-bottom:1px solid var(--border)}
+  h2{font-size:1.6rem;letter-spacing:-.01em;margin-bottom:32px}
+  h2::after{content:"";display:block;width:44px;height:3px;background:var(--accent);margin-top:10px;border-radius:2px}
+  .about p{color:var(--muted);max-width:760px;font-size:1.05rem;margin-bottom:16px}
+  .about b{color:var(--ink)}
+  .skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+  .skill{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;font-weight:500;font-size:.95rem}
+  .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;transition:transform .15s,box-shadow .15s}
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .card .tag{display:inline-block;font-size:.75rem;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:2px 10px;margin-bottom:12px}
+  .card h3{font-size:1.1rem;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.95rem}
+  .job{position:relative;padding-left:24px;border-left:2px solid var(--border);margin-bottom:32px}
+  .job::before{content:"";position:absolute;left:-7px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+  .job h3{font-size:1.05rem}
+  .job .meta{color:var(--muted);font-size:.9rem;margin-bottom:6px}
+  .job p{color:var(--muted);font-size:.95rem}
+  .contact{padding:72px 0 96px;text-align:center;border-bottom:none}
+  .contact p{color:var(--muted);margin-bottom:8px}
+  footer{padding:24px 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+  @media(max-width:640px){.hero h1{font-size:2rem}nav ul{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">monarch<span>.dev</span></div>
+    <div class="nav-right">
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Hello World, I'm <em>Molana Tresna Legawa</em>.</h1>
+    <div class="roles"><b>Full Stack Developer</b> · Community Admin · Community Moderator</div>
+    <p>A passionate Software Engineer with 6 years of experience building digital solutions that bring value to users and businesses.</p>
+    <a class="btn" href="#contact">Get In Touch</a>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <h2>About Me</h2>
+    <p>Hello! My name is <b>Molana Tresna Legawa</b>, and I am a passionate Software Engineer with 6 years of experience in software development. I have a strong passion for coding, problem-solving, and building innovative digital solutions that bring value to users and businesses.</p>
+    <p>Throughout my journey, I have worked with various technologies, including React.js, Next.js, JavaScript, Node.js, PHP, C++, HTML, CSS, SQL, and MongoDB. I also have experience using Figma for UI/UX design and GitHub for version control, collaboration, and project management.</p>
+    <p>Beyond software development, I enjoy managing and leading projects from concept to completion. I have experience developing Discord bots, managing Discord channels and servers, building Telegram bots, and collaborating with teams to develop modern and functional websites.</p>
+    <p>I am also actively involved in managing online communities across Discord and Telegram, where I help maintain engagement, coordinate activities, organize community operations, and create a positive environment for members.</p>
+    <p>I enjoy working independently as well as collaborating with teams. I value creativity, effective communication, teamwork, and continuous learning. I always strive to improve my technical skills, explore new technologies, and turn challenging ideas into practical solutions.</p>
+    <p>My goal is to keep growing as a Software Engineer while creating impactful projects, contributing to meaningful collaborations, and developing technology that makes a difference.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">React.js</div>
+      <div class="skill">Next.js</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">PHP</div>
+      <div class="skill">C++</div>
+      <div class="skill">HTML &amp; CSS</div>
+      <div class="skill">SQL</div>
+      <div class="skill">MongoDB</div>
+      <div class="skill">Figma (UI/UX)</div>
+      <div class="skill">GitHub</div>
+      <div class="skill">Discord &amp; Telegram Bots</div>
+      <div class="skill">Community Management</div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects &amp; Community Work</h2>
+    <div class="projects">
+      <div class="card">
+        <span class="tag">Web3 / Crypto</span>
+        <h3>Blumcrypto</h3>
+        <p>Development and community operations for a crypto project — 2 years 3 months.</p>
+      </div>
+      <div class="card">
+        <span class="tag">AI / L1 Blockchain</span>
+        <h3>Nesa AI — L1 for AI</h3>
+        <p>Contributing to an AI-focused Layer 1 blockchain ecosystem — 2 years 8 months.</p>
+      </div>
+      <div class="card">
+        <span class="tag">NFT</span>
+        <h3>6OBLIN NFT</h3>
+        <p>NFT project development and community engagement — 8 months.</p>
+      </div>
+      <div class="card">
+        <span class="tag">DeFi</span>
+        <h3>Apex Protocol</h3>
+        <p>Protocol development support and community coordination — 1 year 3 months.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Crypto</span>
+        <h3>Apsocoin</h3>
+        <p>Coin project support and community moderation — 5 months.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Community</span>
+        <h3>Discord &amp; Telegram Communities</h3>
+        <p>Admin and moderator across multiple servers: bots, engagement, events, and member operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <div class="job">
+      <h3>Full Stack Developer &amp; Community Admin — Nesa AI (L1 for AI)</h3>
+      <div class="meta">2 years 8 months</div>
+      <p>Building for an AI-focused Layer 1 blockchain while managing its community operations across Discord and Telegram.</p>
+    </div>
+    <div class="job">
+      <h3>Full Stack Developer &amp; Community Admin — Blumcrypto</h3>
+      <div class="meta">2 years 3 months</div>
+      <p>Developing project tooling and leading community management for a crypto project.</p>
+    </div>
+    <div class="job">
+      <h3>Developer &amp; Community Team — Apex Protocol</h3>
+      <div class="meta">1 year 3 months</div>
+      <p>Supporting protocol development and coordinating community activities.</p>
+    </div>
+    <div class="job">
+      <h3>Developer &amp; Moderator — 6OBLIN NFT</h3>
+      <div class="meta">8 months</div>
+      <p>NFT project development and community engagement.</p>
+    </div>
+    <div class="job">
+      <h3>Community Moderator — Apsocoin</h3>
+      <div class="meta">5 months</div>
+      <p>Moderation and member support for the coin's community channels.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 style="margin-left:auto;margin-right:auto">Let's Work Together</h2>
+    <p>Open for freelance projects, collaborations, and full-time opportunities.</p>
+    <p><a href="mailto:moooonarch@gmail.com">moooonarch@gmail.com</a></p>
+    <a class="btn" href="mailto:moooonarch@gmail.com">Send Email</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Molana Tresna Legawa · Built with care</div>
+</footer>
+
+<script>
+  (function(){
+    var t = document.getElementById('themeToggle');
+    var root = document.documentElement;
+    var saved = null;
+    try { saved = localStorage.getItem('theme'); } catch(e){}
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.classList.add('dark');
+      t.textContent = '☀️';
+    }
+    t.addEventListener('click', function(){
+      var dark = root.classList.toggle('dark');
+      t.textContent = dark ? '☀️' : '🌙';
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch(e){}
+    });
+  })();
+</script>
+
+</body>
+</html>
